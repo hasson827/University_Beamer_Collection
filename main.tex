@@ -26,10 +26,10 @@
 \setbeamercolor{title in head/foot}{bg=primary,fg=white}
 \setbeamercolor{institute in head/foot}{bg=primary,fg=white}
 
-\title{How to Create Presentations with LaTeX}
-\subtitle{A Guide to Academic Presentation Using Beamer}
-\author{Hongshuo Zhao}
-\institute{Zhejiang University International Campus}
+\title{如何使用 \LaTeX{} 创建演示文稿}
+\subtitle{使用 Beamer 制作学术报告指南}
+\author{赵宏硕}
+\institute{浙江大学国际校区}
 \date{\today}
 
 \begin{document}
@@ -38,43 +38,44 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{Outline}
+\begin{frame}{目录}
   \tableofcontents
 \end{frame}
 
-\section{Introduction}
+\section{简介}
 
-\begin{frame}{What is Beamer}
-  Beamer is a LaTeX document class for creating presentations, particularly suitable for academic reports \cite{beamer}.
+\begin{frame}{什么是 Beamer}
+  Beamer 是一个用于制作演示文稿的 \LaTeX{} 文档类，特别适合学术报告 \cite{beamer}。
   \begin{itemize}
-    \item Professional mathematical formula typesetting
-    \item Stable cross-referencing
-    \item Seamless integration with LaTeX documents
+    \item 专业的数学公式排版
+    \item 稳定的交叉引用
+    \item 与 \LaTeX{} 文档无缝集成
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Mathematical Examples}
-  The famous Euler's formula:
+\begin{frame}{数学公式示例}
+  著名的欧拉公式：
   \[
     e^{i\pi} + 1 = 0
   \]
   
-  Quadratic formula:
+  二次方程求根公式：
   \[
     x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
   \]
 \end{frame}
 
-\section{Conclusion}
+\section{总结}
 
-\begin{frame}{Thank You}
+\begin{frame}{感谢聆听}
   \begin{center}
-    \Huge Thank You!\\[1cm]
-    \large Questions?
+    \Huge 谢谢！\\[1cm]
+    \large 欢迎提问！
   \end{center}
 \end{frame}
 
-\begin{frame}{References}
+\begin{frame}{参考文献}
+  \nocite{*}
   \bibliography{reference}
   \bibliographystyle{plain}
 \end{frame}

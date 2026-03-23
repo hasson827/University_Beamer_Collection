@@ -9,8 +9,7 @@ resource/
 ├── THU/               # 清华大学
 │   ├── logo.pdf
 │   ├── logo_white.pdf
-│   ├── colors.sty
-│   └── README.md
+│   └── colors.sty
 ├── PKU/               # 北京大学
 ├── ZJU/               # 浙江大学
 ├── SJTU/              # 上海交大
