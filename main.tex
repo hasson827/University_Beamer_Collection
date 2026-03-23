@@ -1,0 +1,82 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amsmath,amssymb}
+
+\makeatletter
+\def\input@path{{theme/}}
+\makeatother
+
+\InputIfFileExists{colors.sty}{}{
+  \definecolor{primary}{RGB}{100,100,100}
+}
+
+\usepackage{font}
+\usepackage{inner}
+\usepackage{outer}
+
+\setbeamercolor{title}{fg=primary}
+\setbeamercolor{frametitle}{fg=white,bg=primary}
+\setbeamercolor{structure}{fg=primary}
+\setbeamercolor{block title}{bg=primary,fg=white}
+\setbeamercolor{block body}{bg=secondary}
+\setbeamercolor{author in head/foot}{bg=primary,fg=white}
+\setbeamercolor{title in head/foot}{bg=primary,fg=white}
+\setbeamercolor{institute in head/foot}{bg=primary,fg=white}
+
+\title{How to Create Presentations with LaTeX}
+\subtitle{A Guide to Academic Presentation Using Beamer}
+\author{Hongshuo Zhao}
+\institute{Zhejiang University International Campus}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{What is Beamer}
+  Beamer is a LaTeX document class for creating presentations, particularly suitable for academic reports \cite{beamer}.
+  \begin{itemize}
+    \item Professional mathematical formula typesetting
+    \item Stable cross-referencing
+    \item Seamless integration with LaTeX documents
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Mathematical Examples}
+  The famous Euler's formula:
+  \[
+    e^{i\pi} + 1 = 0
+  \]
+  
+  Quadratic formula:
+  \[
+    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+  \]
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Thank You}
+  \begin{center}
+    \Huge Thank You!\\[1cm]
+    \large Questions?
+  \end{center}
+\end{frame}
+
+\begin{frame}{References}
+  \bibliography{reference}
+  \bibliographystyle{plain}
+\end{frame}
+
+\end{document}

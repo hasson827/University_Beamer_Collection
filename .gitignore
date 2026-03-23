@@ -324,3 +324,25 @@ TSWLatexianTemp*
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
+
+#OS files
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# University Beamer Collection - Working Dirs
+# ==========================================
+
+# Working directories (user copies from resource/)
+figures/*.pdf
+figures/*.sty
+
+# Placeholder files
+*.placeholder
+
+# Output PDF (keep examples)
+*.pdf
+!examples/**/*.pdf
+
+# Reference templates (not for distribution)
+reference/

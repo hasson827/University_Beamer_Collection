@@ -1,0 +1,56 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{inner}[2026/03/23 Beamer Inner Theme]
+
+\RequirePackage{tikz}
+
+\setbeamertemplate{title page}{
+  \vbox{}
+  \begingroup
+    \centering
+    {\usebeamercolor[fg]{titlegraphic}
+      \includegraphics[height=2.5cm]{theme/logo}
+      \par}
+    \vskip1.5em
+    
+    \begin{beamercolorbox}[sep=8pt,center]{title}
+      \usebeamerfont{title}\inserttitle\par%
+      \ifx\insertsubtitle\@empty%
+      \else%
+        \vskip0.25em%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+      \fi%
+    \end{beamercolorbox}%
+    
+    \vskip1em\par
+    
+    \begin{beamercolorbox}[sep=8pt,center]{author}
+      \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+    
+    \begin{beamercolorbox}[sep=8pt,center]{institute}
+      \usebeamerfont{institute}\insertinstitute
+    \end{beamercolorbox}
+    
+    \begin{beamercolorbox}[sep=8pt,center]{date}
+      \usebeamerfont{date}\insertdate
+    \end{beamercolorbox}
+  \endgroup
+  \vfill
+}
+
+\useinnertheme{circles}
+
+\setbeamertemplate{frametitle}{%
+  \vspace{0.3cm}%
+  {\usebeamerfont{frametitle}\insertframetitle}%
+  \ifx\insertframesubtitle\empty\else
+    \\
+    {\usebeamerfont{framesubtitle}\insertframesubtitle}%
+  \fi
+  \vspace{0.2cm}%
+}
+
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{enumerate items}[default]
+
+\endinput
