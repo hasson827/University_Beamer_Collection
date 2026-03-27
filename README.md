@@ -25,20 +25,26 @@ open main.pdf
 
 ## 🎓 支持的高校
 
-| 高校 | 命令 |
-|------|------|
-| 清华大学 | `make setup UNI=THU` |
-| 北京大学 | `make setup UNI=PKU` |
-| 浙江大学 | `make setup UNI=ZJU` |
-| 上海交通大学 | `make setup UNI=SJTU` |
-| 复旦大学 | `make setup UNI=FDU` |
-| 南京大学 | `make setup UNI=NJU` |
-| 中国科学技术大学 | `make setup UNI=USTC` |
-| 哈尔滨工业大学 | `make setup UNI=HIT` |
-| 西安交通大学 | `make setup UNI=XJTU` |
-| 自定义 | `make setup UNI=custom` |
+目前已支持 **40 所高校**主题：
 
-> 📢 **更多高校正在路上！** 后续会逐步扩充其他高校主题，欢迎各学校的同学来贡献自己学校的 logo 和校色！
+| 高校 | 命令 | 高校 | 命令 | 高校 | 命令 |
+|:--|:--|:--|:--|:--|:--|
+| 北京大学 | `make setup UNI=PKU` | 华中科技大学 | `make setup UNI=HUST` | 同济大学 | `make setup UNI=TJU` |
+| 清华大学 | `make setup UNI=THU` | 武汉大学 | `make setup UNI=WHU` | 北京航空航天大学 | `make setup UNI=BUAA` |
+| 浙江大学 | `make setup UNI=ZJU` | 中山大学 | `make setup UNI=SYSU` | 北京师范大学 | `make setup UNI=BNU` |
+| 上海交通大学 | `make setup UNI=SJTU` | 哈尔滨工业大学 | `make setup UNI=HIT` | 中国农业大学 | `make setup UNI=CAU` |
+| 南京大学 | `make setup UNI=NJU` | 西安交通大学 | `make setup UNI=XJTU` | 中央民族大学 | `make setup UNI=MUC` |
+| 复旦大学 | `make setup UNI=FDU` | 四川大学 | `make setup UNI=SCU` | 南开大学 | `make setup UNI=NKU` |
+| 中国科学技术大学 | `make setup UNI=USTC` | 山东大学 | `make setup UNI=SDU` | 天津大学 | `make setup UNI=TJU` |
+| 北京理工大学 | `make setup UNI=BIT` | 中南大学 | `make setup UNI=CSU` | 华东师范大学 | `make setup UNI=ECNU` |
+| 大连理工大学 | `make setup UNI=DUT` | 吉林大学 | `make setup UNI=JLU` | 厦门大学 | `make setup UNI=XMU` |
+| 西北工业大学 | `make setup UNI=NPU` | 湖南大学 | `make setup UNI=HNU` | 电子科技大学 | `make setup UNI=UESTC` |
+| 北京交通大学 | `make setup UNI=BJTU` | 兰州大学 | `make setup UNI=LZU` | 东南大学 | `make setup UNI=SEU` |
+| 华南理工大学 | `make setup UNI=SCUT` | 中国海洋大学 | `make setup UNI=OUC` | 西北农林科技大学 | `make setup UNI=NWAFU` |
+| 重庆大学 | `make setup UNI=CQU` | 东北大学 | `make setup UNI=NEU` | 国防科技大学 | `make setup UNI=NUDT` |
+| 中国人民大学 | `make setup UNI=RUC` | 自定义 | `make setup UNI=custom` | | |
+
+> 📢 **欢迎贡献！** 如果你希望添加自己学校的主题，请参考下方的贡献指南，准备好校徽和配色方案后提交 PR！
 
 ## 📁 项目结构
 
@@ -52,11 +58,12 @@ open main.pdf
 │   ├── outer.sty        # 外页样式（页眉页脚）
 │   ├── colors.sty       # 颜色配置（运行时复制）
 │   └── logo.pdf         # 校徽（运行时复制）
-├── resource/             # 高校资源文件
+├── resource/             # 高校资源文件（40+ 所高校）
 │   ├── THU/             # 清华大学
 │   ├── PKU/             # 北京大学
 │   ├── ZJU/             # 浙江大学
 │   ├── SJTU/            # 上海交大
+│   ├── ...              # 其他高校
 │   └── custom/          # 自定义主题
 ├── examples/             # 示例 PDF 和预览图
 │   ├── PKU.pdf
@@ -73,7 +80,7 @@ open main.pdf
 | 命令 | 说明 |
 |------|------|
 | `make` | 编译主文档（xelatex + bibtex + xelatex×2） |
-| `make setup UNI=X` | 切换大学主题（X=THU/PKU/ZJU/SJTU/FDU/NJU/USTC/HIT/XJTU/custom） |
+| `make setup UNI=X` | 切换大学主题（X 为上述表格中的代码） |
 | `make clean` | 清理生成的临时文件 |
 | `make help` | 显示帮助信息 |
 
